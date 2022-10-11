@@ -5,7 +5,6 @@ from paho.mqtt import client as mqtt_client
 
 
 broker = 'wss://vernemq-testops.pwc.dev.cos.pwtestops.com/mqtt'
-topic = "python/mqtt"
 # generate client ID with pub prefix randomly
 topic = "python/mqtt"
 client_id = 'mqttx_cc70525f'
