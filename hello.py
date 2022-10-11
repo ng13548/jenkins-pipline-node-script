@@ -10,9 +10,9 @@ topic = "python/mqtt"
 broker = 'broker.emqx.io'
 port = 1883
 topic = "python/mqtt"
-client_id = f'python-mqtt-{random.randint(0, 1000)}'
-# username = 'emqx'
-# password = 'public'
+client_id = 'test-client-id'
+username = 'tsmmqttuser'
+password = 'ZFjN39bfg4YgCL9d'
 
 
 
