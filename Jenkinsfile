@@ -4,6 +4,7 @@ pipeline {
     stage('version') {
       steps {
         sh 'python --version'
+        sh 'pip install paho-mqtt'
       }
     }
     stage('hello') {
