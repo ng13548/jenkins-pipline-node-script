@@ -38,6 +38,8 @@ def publish(client):
             print("Send `{msg}` to topic `{topic}`")
         else:
             print("Failed to send message to topic {topic}")
+            
+        clinet.loop_stop()
 
 def run():
     client = connect_mqtt()
