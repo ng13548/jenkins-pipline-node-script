@@ -12,6 +12,7 @@ topic = "python/mqtt"
 client_id = 'test-client-id'
 username = 'tsmmqttuser'
 password = 'ZFjN39bfg4YgCL9d'
+msg = 'test'
 
 
 
@@ -30,9 +31,6 @@ def connect_mqtt():
 
 
 def publish(client):
-    msg_count = 0
-    while True:
-        msg = "messages: {msg_count}"
         result = client.publish(topic, msg)
         # result: [0, 1]
         status = result[0]
@@ -40,8 +38,6 @@ def publish(client):
             print("Send `{msg}` to topic `{topic}`")
         else:
             print("Failed to send message to topic {topic}")
-        msg_count += 1
-
 
 def run():
     client = connect_mqtt()
