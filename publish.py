@@ -14,6 +14,7 @@ password = 'ZFjN39bfg4YgCL9d'
 # username = 'tsmmqttuser'
 # password = 'ZFjN39bfg4YgCL9d'
 msg = 'test'
+port  8080
 
 
 
@@ -27,7 +28,7 @@ def connect_mqtt():
     client = mqtt_client.Client(client_id)
     client.username_pw_set(username, password)
     client.on_connect = on_connect
-    client.connect(broker)
+    client.connect(broker, port)
     return client
 
 
