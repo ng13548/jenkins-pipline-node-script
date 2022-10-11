@@ -45,6 +45,7 @@ def publish(client):
 def run():
     client = connect_mqtt()
     client.loop_start()
+    print("mqtt connection established, publishing client now")
     publish(client)
 
 if __name__ == '__main__':
