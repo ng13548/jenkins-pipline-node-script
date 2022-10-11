@@ -32,7 +32,7 @@ def connect_mqtt():
 
 def subscribe(client):
     def on_message(client, userdata, msg):
-        print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
+        print("Received `{msg.payload.decode()}` from `{msg.topic}` topic")
 
     client.subscribe(topic)
     client.on_message = on_message
