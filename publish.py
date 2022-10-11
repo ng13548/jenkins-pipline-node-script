@@ -5,7 +5,7 @@ from paho.mqtt import client as mqtt_client
 
 
 broker = 'emqx.io'
-port = 8083
+port = 1883
 topic = "python/mqtt"
 # generate client ID with pub prefix randomly
 topic = "python/mqtt"
