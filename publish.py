@@ -14,7 +14,7 @@ password = 'ZFjN39bfg4YgCL9d'
 # username = 'tsmmqttuser'
 # password = 'ZFjN39bfg4YgCL9d'
 msg = 'test'
-port  8080
+port = 8080
 
 
 
