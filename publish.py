@@ -10,6 +10,8 @@ topic = "python/mqtt"
 # generate client ID with pub prefix randomly
 topic = "python/mqtt"
 client_id = 'test-client-id'
+username = 'emqx'
+password = 'public'
 # username = 'tsmmqttuser'
 # password = 'ZFjN39bfg4YgCL9d'
 msg = 'test'
