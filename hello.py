@@ -16,7 +16,7 @@ password = 'ZFjN39bfg4YgCL9d'
 
 
 
-def connect_mqtt() -> mqtt_client:
+def connect_mqtt():
     def on_connect(client, userdata, flags, rc):
         if rc == 0:
             print("Connected to MQTT Broker!")
