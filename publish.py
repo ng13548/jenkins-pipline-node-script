@@ -10,8 +10,8 @@ topic = "python/mqtt"
 # generate client ID with pub prefix randomly
 topic = "python/mqtt"
 client_id = 'test-client-id'
-username = 'tsmmqttuser'
-password = 'ZFjN39bfg4YgCL9d'
+# username = 'tsmmqttuser'
+# password = 'ZFjN39bfg4YgCL9d'
 msg = 'test'
 
 
@@ -35,7 +35,7 @@ def publish(client):
         # result: [0, 1]
         status = result[0]
         if status == 0:
-            print("Send `{msg}` to topic `{topic}`")
+            print("Send {msg} to topic {topic}")
         else:
             print("Failed to send message to topic {topic}")
             
