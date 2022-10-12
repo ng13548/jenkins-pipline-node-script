@@ -9,6 +9,7 @@ from paho.mqtt import client as mqtt_client
 broker = 'broker.emqx.io'
 port = 8083
 topic = "python/mqtt"
+msg  "test"
 # generate client ID with pub prefix randomly
 my_client_id = 'my-client-id'
 # username = 'tsmmqttuser'
@@ -38,7 +39,6 @@ def connect_mqtt():
 
 def publish(client):
     msg_count = 0
-        msg = 'test message'
         result = client.publish(topic, msg)
         # result: [0, 1]
         status = result[0]
