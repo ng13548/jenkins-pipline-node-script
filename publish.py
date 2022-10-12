@@ -9,9 +9,8 @@ from paho.mqtt import client as mqtt_client
 broker = 'broker.emqx.io'
 port = 8083
 topic = "python/mqtt"
-msg  = "test"
 # generate client ID with pub prefix randomly
-my_client_id = 'my-client-id'
+my_client_id = f'python-mqtt-{random.randint(0, 1000)}'
 # username = 'tsmmqttuser'
 # password = 'ZFjN39bfg4YgCL9d'
 
@@ -26,7 +25,7 @@ def connect_mqtt():
     client = mqtt_client.Client(client_id = my_client_id, transport=mytransport,
                          protocol=mqtt_client.MQTTv311,
                          clean_session=True)
-    print("Mqtt Client 1`{client}`")
+    print(f"Mqtt Client 1`{client}`")
     
 
     # client.username_pw_set(username, password)
@@ -39,17 +38,20 @@ def connect_mqtt():
 
 def publish(client):
     msg_count = 0
+        msg = f"messages: {msg_count}"
         result = client.publish(topic, msg)
         # result: [0, 1]
         status = result[0]
         if status == 0:
-            print("Send `{msg}` to topic `{topic}`")
+            print(f"Send `{msg}` to topic `{topic}`")
         else:
-            print("Failed to send message to topic {topic}")
+            print(f"Failed to send message to topic {topic}")
+        msg_count += 1
+
 
 def run():
     client = connect_mqtt()
-    print("Mqtt Client `{client}`")
+    print(f"Mqtt Client `{client}`")
     client.loop_start()
     publish(client)
 
