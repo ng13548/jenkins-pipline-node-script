@@ -49,6 +49,8 @@ def publish(client):
         else:
             print("Failed to send message to topic {topic}")
         msg_count += 1
+        if msg_count > 2:
+            client.loop_stop()
 
 
 def run():
