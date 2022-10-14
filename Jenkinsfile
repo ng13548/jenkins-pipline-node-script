@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage('version') {
       steps {
-        sh 'python --version'
-        sh 'pip3 install paho-mqtt'
+        sh 'node --version'
+        sh 'npm install mqtt'
       }
     }
     stage('hello') {
       steps {
-        sh 'python publish.py'
+        sh 'node mqtt-pub.js'
       }
     }
   }
