@@ -1,13 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('node version check') {
       steps {
         sh 'node --version'
         sh 'npm install mqtt'
       }
     }
-    stage('hello') {
+    stage('Subscribe to MQTT Event') {
       steps {
         sh 'node mqtt-sub.js'
       }
